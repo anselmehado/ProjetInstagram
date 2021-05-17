@@ -34,11 +34,11 @@
 
     <div class="field">
 
-      <div class="field">
-<%= f.label :image %>
-<%= image_tag(@user.avatar1.url) if @user.avatar1 && @user.avatar1.url %>
-<%= f.file_field :avatar1 %>
-<%= f.hidden_field :avatar1_cache %>
+  <div class="field">
+      <%= f.label :image %>
+      <%= image_tag(@user.avatar1.url) if @user.avatar1 && @user.avatar1.url %>
+      <%= f.file_field :avatar1 %>
+      <%= f.hidden_field :avatar1_cache %>
 </div>
  <%= f.submit "Create my account" %>
  <% end %>

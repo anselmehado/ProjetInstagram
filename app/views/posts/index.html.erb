@@ -22,8 +22,8 @@
 
   <% @posts.each do |post| %>
 
-    <%= post.created_at %><p><b>Posted by:</b> <%= post.user.name %></p>
-
+  <p><%= post.created_at %> <%= post.user.name %></p>
+  
     <textarea id="w3review" name="w3review" rows="4" cols="25" maxlength="140">
       <%= post.content %>
     </textarea>   <br>

@@ -5,8 +5,8 @@
 </div>
 
 <div>
-  <strong>Image:</strong>
- <%= image_tag(@post.avatar_url,style:'width:100px;height:1000px') if @post.avatar_url %>
+  <!-- <strong>Image:</strong> -->
+ <%= image_tag(@post.avatar_url,style:'width:100px;height:100px') if @post.avatar_url %>
 </div>
 
 <% unless @post.user_id == current_user.id %>
