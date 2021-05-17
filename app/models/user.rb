@@ -10,5 +10,6 @@ class User < ApplicationRecord
 
                     mount_uploader :avatar1, ImageUploader
 
-                    has_many :profiles
+                  #  has_many :profiles
+                    has_one :profile, dependent: :destroy
 end
