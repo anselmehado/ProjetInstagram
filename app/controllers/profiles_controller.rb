@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @profile.update(profile_params)
-      redirect_to profiles_path, notice: "I edited the blog!"
+      redirect_to profiles_path, notice: "I edited my profile"
     else
     render :edit
     end

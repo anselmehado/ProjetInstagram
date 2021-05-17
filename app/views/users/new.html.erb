@@ -11,34 +11,20 @@
  <% end %>
  <%= form_with(model: @user, local: true) do |f| %>
 
-    <div class="">
-      <%= f.label :name %>
-     <%= f.text_field :name %>
-    </div>
+ <form class="login-container">
+   <%= f.label "name：" %><br>
+   <%= f.text_field :name %><br>
+   <%= f.label "email：" %><br>
+   <%= f.text_field :email %><br>
+   <%= f.label "password："  %><br>
+   <%= f.password_field :password %><br>
+   <%= f.label "password_confirmation："  %><br>
+   <%= f.password_field :password_confirmation %><br>
 
-    <div class="">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
+   <%= f.file_field :image %>
+   <%= f.hidden_field :image_cache %><br><br>
 
+   <%= f.submit "Create my account" %>
 
-    <div class="">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
-
-    <div class="">
-       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
-    </div>
-
-    <div class="field">
-
-  <div class="field">
-      <%= f.label :image %>
-      <%= image_tag(@user.avatar1.url) if @user.avatar1 && @user.avatar1.url %>
-      <%= f.file_field :avatar1 %>
-      <%= f.hidden_field :avatar1_cache %>
-</div>
- <%= f.submit "Create my account" %>
+ </form>
  <% end %>
