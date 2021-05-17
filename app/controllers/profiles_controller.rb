@@ -2,19 +2,19 @@ class ProfilesController < ApplicationController
 
   skip_before_action :login_required, only: [:new, :create]
   def show
-       @profile = profile.find(params[:id])
+       @profile = Profile.find(params[:id])
   end
 
   def index
-    @profiles = profile.all
+    @profiles = Profile.all
   end
 
   def new
-    @profile = profile.new
+    @profile = Profile.new
   end
 
   def create
-      @profile = profile.new(profile_params)
+      @profile = Profile.new(profile_params)
       if @profile.save
 
       redirect_to profile_path(@profile.id)
@@ -36,7 +36,7 @@ class ProfilesController < ApplicationController
   end
 
   def set_profile
-    @profile = profile.find(params[:id])
+    @profile = Profile.find(params[:id])
   end
 
   def destroy
