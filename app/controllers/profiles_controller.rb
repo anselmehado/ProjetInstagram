@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
 
   def create
       @user = current_user.profiles.build(user_params)
-  
+
       @profile = Profile.new(profile_params)
       if @profile.save
 
@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-
+ 
   end
 
   def update
