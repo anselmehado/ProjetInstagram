@@ -9877,3 +9877,1343 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts" for ::1 at 2021-05-25 18:52:08 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (77.4ms)
+Completed 200 OK in 1011ms (Views: 764.6ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/css/normalize.css" for ::1 at 2021-05-25 18:52:10 +0100
+Started GET "/css/sample.css" for ::1 at 2021-05-25 18:52:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/sample.css"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/css/normalize.css"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/css/sample.css" for ::1 at 2021-05-25 18:52:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/css/sample.css"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/sessions/1" for ::1 at 2021-05-25 18:52:13 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kQVAe01OHQXgw9VLBfj2hNQDRLUgBGNa4XI+dffxEyqp57j4LWKcaBwiq6TJSNgdknbxcvyFe7ZMRXkPZ7RZRQ==", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 18:52:13 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (106.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 145ms (Views: 127.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-25 18:52:16 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (32.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 73ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2021-05-25 18:54:59 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GjtloANlbY4BBTCrHlxnQHswXlgPLcfTVrAaB5xwDS0LGeMUGoPr0khYc6COATdHMTFF++DRW4QjYT9Yx5WoKg==", "user"=>{"name"=>"do@yahoo.com", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Edit"}
+Unpermitted parameter: :image_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 319ms (Views: 56.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2021-05-25 19:28:15 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWC/SBO1q9hNJt1E+C6mmf7pXLrfoGxM36tPlNYB4yK9gkfLc5kqtbHHo6s0nogAuJzpfQMhdKBynAjuRkSpTQ==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Edit"}
+Unpermitted parameter: :image_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:17
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 300ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2021-05-25 19:29:05 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWC/SBO1q9hNJt1E+C6mmf7pXLrfoGxM36tPlNYB4yK9gkfLc5kqtbHHo6s0nogAuJzpfQMhdKBynAjuRkSpTQ==", "user"=>{"name"=>"aa", "email"=>"aa@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe71d8aee48 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-70411-1t7a8km.jpeg>, @original_filename="back_image.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"back_image.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Unpermitted parameters: :image, :image_cache
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17
+  [1m[36mUser Create (179.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "aa"], ["email", "aa@yahoo.com"], ["password_digest", "$2a$12$402HZAa1INqdowbwL33we.kyFSx3laNJb1.2mbPqBJ4MZZ/lQHrQ."], ["created_at", "2021-05-25 18:29:05.856507"], ["updated_at", "2021-05-25 18:29:05.856507"]]
+  ↳ app/controllers/users_controller.rb:17
+  [1m[35m (85.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:17
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 528ms (ActiveRecord: 265.1ms)
+
+
+Started GET "/users/22" for ::1 at 2021-05-25 19:29:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:29:06 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-25 19:29:25 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ge/I5V8OrlpIX6hK5HdqJkAOGoA940GSq1jJvs5bq+UhDTBmPyIvN7S+1qUox0S/BnuvR+FiWX4Gb47EXh7hig==", "session"=>{"email"=>"aa@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aa@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 263ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/22" for ::1 at 2021-05-25 19:29:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/22" for ::1 at 2021-05-25 19:31:03 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/sessions/22" for ::1 at 2021-05-25 19:31:05 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jMwGRZrzOfZ7GaY97mBJ0FIJBbTB/5cmv3GK+EFHMl+0Lv7G+t+4m4f42NIi0GdJFHywcx1+j8oSRs2C0QJ4MA==", "id"=>"22"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:31:05 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-25 19:31:09 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:31:19 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-25 19:31:38 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Isp45ZcPUQmb7XdP2zx0e6LRZzJ67zE89ZOv1GmTie0k4hWmAbbWVpwlOdebyP/blDpdtyUBiUdYoHyWPX7wyg==", "session"=>{"email"=>"aa@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aa@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 262ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/22" for ::1 at 2021-05-25 19:31:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/sessions/22" for ::1 at 2021-05-25 19:32:14 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ioOevZvueV9rBrXhzwD+aq6aiKOuEe64AHE6i3twV+2yYWY++8L4Mpfnyw4DsNDz6O89ZHKQ9lStRn3x6zUdgg==", "id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:32:14 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-25 19:32:20 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:33:01 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-25 19:33:17 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4ocVWdZu3c0hnhuGD7lO3w0/WOc/4WcL60zUWxouJBXkr3gaQNdakiZWVR5PTcV/O9RiYmAP33BGfwcZTsNdMg==", "session"=>{"email"=>"aa@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aa@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/22
+Completed 302 Found in 264ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/22" for ::1 at 2021-05-25 19:33:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions/22" for ::1 at 2021-05-25 19:58:47 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"krDBN2h/TX7HZqScJJ1nq/cICvQLqjqzw/Ig7O/qzqKqUjm0CFPMEzuH2nPoLUkysX2/M9crIl9uxWeWf6+EzQ==", "id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 59ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 19:58:47 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 292ms (Views: 291.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-25 19:58:54 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2021-05-25 19:59:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gQUMjDSeXfysGqQsly25JV3LY97xC1o/qIVkRCEDxD3JpKGKTT/K7vtKZsiAebj33Y2LJQ4sT+LczDOS2GqFw==", "user"=>{"name"=>"dodo", "email"=>"dodo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff640116488 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-72032-okekmt.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Unpermitted parameters: :image, :image_cache
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Profile.):
+  
+app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2021-05-25 20:00:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gQUMjDSeXfysGqQsly25JV3LY97xC1o/qIVkRCEDxD3JpKGKTT/K7vtKZsiAebj33Y2LJQ4sT+LczDOS2GqFw==", "user"=>{"name"=>"dodo", "email"=>"dodo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff63425b5c0 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-72032-1o8ude2.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: profile):
+  
+app/controllers/users_controller.rb:62:in `profile_params'
+app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2021-05-25 20:02:25 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gQUMjDSeXfysGqQsly25JV3LY97xC1o/qIVkRCEDxD3JpKGKTT/K7vtKZsiAebj33Y2LJQ4sT+LczDOS2GqFw==", "user"=>{"name"=>"dodo", "email"=>"dodo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055638e808a58 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-72032-1afb8cw.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: profile):
+  
+app/controllers/users_controller.rb:62:in `profile_params'
+app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (82.9ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/users" for ::1 at 2021-05-25 21:10:33 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gQUMjDSeXfysGqQsly25JV3LY97xC1o/qIVkRCEDxD3JpKGKTT/K7vtKZsiAebj33Y2LJQ4sT+LczDOS2GqFw==", "user"=>{"name"=>"dodo", "email"=>"dodo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055937de3c5e0 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-73433-1wtiesi.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 400 Bad Request in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: profile):
+  
+app/controllers/users_controller.rb:64:in `profile_params'
+app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2021-05-25 21:10:52 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gQUMjDSeXfysGqQsly25JV3LY97xC1o/qIVkRCEDxD3JpKGKTT/K7vtKZsiAebj33Y2LJQ4sT+LczDOS2GqFw==", "user"=>{"name"=>"dodo", "email"=>"dodo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055937e983228 @tempfile=#<Tempfile:/tmp/RackMultipart20210525-73433-1imi6c4.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: profile):
+  
+app/controllers/users_controller.rb:64:in `profile_params'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/posts" for ::1 at 2021-05-25 23:41:15 +0100
+  [1m[35m (451.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (36.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 324ms (ActiveRecord: 119.0ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-25 23:41:17 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (171.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 605ms (Views: 595.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-25 23:41:41 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"18qyJhXk5mN3YuIRPDqaGCihOIphKlViShX/UarvVHdk6pN43h1dJydSCK87GzONJqr9mcSxsGKPI69lb5yZIQ==", "session"=>{"email"=>"pi@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pi@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 341ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/users/1" for ::1 at 2021-05-25 23:41:41 +0100
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/controllers/users_controller.rb:62: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:62: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2021-05-25 23:42:22 +0100
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2021-05-25 23:43:00 +0100
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2021-05-25 23:43:44 +0100
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:58: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2021-05-25 23:44:42 +0100
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/controllers/users_controller.rb:57: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:57: syntax error, unexpected end-of-input, expecting end
+Started GET "/users/1" for ::1 at 2021-05-25 23:45:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="users_h1_box"><h1><%= @users.name %>page</h1></div>
+    2: <p id="notice"><%= notice %></p>
+    3: <p>
+    4:   <strong>mail address：<%= @users.email %>
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb___2187468852396167305_70104705763740'
+Started GET "/users/1" for ::1 at 2021-05-25 23:47:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <div class="users_h1_box"><h1><%= @user.name %>page</h1></div>
+    2: <p id="notice"><%= notice %></p>
+    3: <p>
+    4:   <strong>mail address：<%= @users.email %>
+    5: </p>
+    6: <%= image_tag(@users.avatar1_url,style:'width:300px;height:200px') if @users.avatar1_url %><br>
+    7: <%= link_to "EDIT", edit_user_path(current_user.id)%>
+  
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb___2187468852396167305_70104538637660'
+Started GET "/users/1" for ::1 at 2021-05-25 23:47:07 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    1: <div class="users_h1_box"><h1><%= @user.name %>page</h1></div>
+    2: <p id="notice"><%= notice %></p>
+    3: <p>
+    4:   <strong>mail address：<%= @users.email %>
+    5: </p>
+    6: <%= image_tag(@users.avatar1_url,style:'width:300px;height:200px') if @users.avatar1_url %><br>
+    7: <%= link_to "EDIT", edit_user_path(current_user.id)%>
+  
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb___2187468852396167305_70104623862260'
+Started GET "/users/1" for ::1 at 2021-05-25 23:47:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar1_url' for nil:NilClass):
+    3: <p>
+    4:   <strong>mail address：<%= @user.email %>
+    5: </p>
+    6: <%= image_tag(@users.avatar1_url,style:'width:300px;height:200px') if @users.avatar1_url %><br>
+    7: <%= link_to "EDIT", edit_user_path(current_user.id)%>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb___2187468852396167305_70104615329400'
+Started GET "/users/1" for ::1 at 2021-05-25 23:47:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:47:46 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104623709040'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104623679760'
+Started GET "/users/1" for ::1 at 2021-05-25 23:48:33 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:48:39 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/edit.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104538937460'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104538882700'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:51:03 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/edit.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104705241340'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104705181180'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:51:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104539231300'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104539201100'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:51:41 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.3ms)
+  Rendered users/edit.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104705725060'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104705664300'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:52:08 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/edit.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___3853754763054264323_70104539951840'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb__4260554158580256143_70104539839780'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:57:18 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 4.7ms)
+
+
+  
+SyntaxError (/home/hado/workspace/ProjetInstagram/app/views/users/_form.html.erb:12: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/users/_form.html.erb:12: syntax error, unexpected ensure, expecting end-of-input
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_70291711480160'
+Started GET "/users/1/edit" for ::1 at 2021-05-25 23:57:57 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/edit.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+    5: 		<% @user.errors.full_messages.each do |message| %>
+    6:       <li><%= message %></li>
+  
+app/views/users/_form.html.erb:3:in `_app_views_users__form_html_erb___1113108905473550584_47398223350000'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_47398222866380'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:01:53 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.4ms)
+  Rendered users/edit.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_70291602683180'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_70291602636580'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:01:55 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/edit.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_70291709849060'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_70291709728880'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:01:56 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.0ms)
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_47398227987100'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_47398227884320'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:03:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/edit.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_47398205992200'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_47398204407940'
+Started POST "/__web_console/repl_sessions/e97fd939fbbadbbd592aa0402dba1c26/trace" for ::1 at 2021-05-26 00:03:37 +0100
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:04:02 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_70291569006440'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_70291773827480'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:04:07 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/edit.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_70291709956300'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_70291709776900'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:06:19 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `error' for nil:NilClass):
+    1: <% if @user.error.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___1113108905473550584_47398227917460'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1266925027965702587_47398227762020'
+Started GET "/users/1/edit" for ::1 at 2021-05-26 00:14:33 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/edit.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <% if @user.errors.any? %>
+    2: 	<div id="error_explanation">
+    3: 		<h2><%= @user.errors.count%>From the error<%= @user.name if @user.name %><%= "User"  if @user.name.empty? %>Could not be registered.</h2>
+    4: 		<ul>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__1404384945032618987_46914285078000'
+app/views/users/edit.html.erb:2:in `_app_views_users_edit_html_erb___1407287564836298704_46914289160920'
+Started POST "/sessions" for ::1 at 2021-05-26 00:17:38 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"18qyJhXk5mN3YuIRPDqaGCihOIphKlViShX/UarvVHdk6pN43h1dJydSCK87GzONJqr9mcSxsGKPI69lb5yZIQ==", "session"=>{"email"=>"pi@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pi@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 460ms (Views: 189.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-26 00:17:41 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CP4VK7Z0kVSc+G1XyDnTaZUCbdU3bkcvH+4OkhIqMOy73jR1fY0qEMzIh+nPGHr8mwmoxpL1oi/a2F6m11n9ug==", "session"=>{"email"=>"do@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "do@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/sessions/1" for ::1 at 2021-05-26 00:18:09 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Vi7z0Mb4gi0RWfYHRHv2svEABoRg5ujcMS+bMXMZmmvlDtKODQE5aUFpHLlDWl8n/wvDl8V9Ddz0GcsFtmpXPQ==", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-26 00:18:09 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-26 00:18:10 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (32.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 69ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2021-05-26 00:18:49 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fad240da010 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-4855-cohgqc.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `private' for #<UsersController:0x00007fad240da650>
+Did you mean?  print):
+  
+app/controllers/users_controller.rb:54:in `create'
+Started POST "/users" for ::1 at 2021-05-26 00:20:02 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fad34499650 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-4855-1jmnqgl.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `profile' for nil:NilClass):
+  
+app/controllers/users_controller.rb:20:in `create'
+Started POST "/users" for ::1 at 2021-05-26 00:22:06 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fad34702860 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-4855-3we4ml.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `private' for #<UsersController:0x00007fad34713b10>
+Did you mean?  print):
+  
+app/controllers/users_controller.rb:54:in `create'
+Started POST "/users" for ::1 at 2021-05-26 04:30:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fad200e27c8 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-4855-5jfw4r.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-05-26 04:30:59 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000558f4f5aa698 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-1xx4c1.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-05-26 04:32:16 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oYTugFBNwuXAjTXZ1LwY1+1pVBmD5KVDN8X7noWlN0TszpFbgV6eHZlFgMTKCi/yD4q/ESwxxBdf8E34wwKL6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000558f503266a0 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-16b06uq.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `private' for #<UsersController:0x0000558f503588f8>
+Did you mean?  print):
+  
+app/controllers/users_controller.rb:54:in `create'
+Started GET "/posts" for ::1 at 2021-05-26 04:32:27 +0100
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :login_required rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-26 04:32:27 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 250ms (Views: 247.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-26 04:32:53 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qG0dQ9ogH9aFF2tmMyyuV/eysvsGDDBb+RcGIF19YQQbTTwdEdmkktUngdg0DQfC+bl36KOX1Vs8IVYUmA6sUg==", "session"=>{"email"=>"pi@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pi@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 278ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1" for ::1 at 2021-05-26 04:32:53 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-26 04:33:01 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.7ms)
+  Rendered users/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/1" for ::1 at 2021-05-26 04:33:57 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rzptj/CIifui7tm//tdAU53Unl0KLgdJed1QZCnYJxkVG4nL6fk/bAUG1C0ZhnNFM4bg1eItdmEvj/DnIwHs6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar1"=>#<ActionDispatch::Http::UploadedFile:0x00007fe8ec0a4330 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-ufqgrj.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar1]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar1_cache"=>""}, "commit"=>"edit", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fe8ec0a4998>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:38:in `update'
+Started PATCH "/users/1" for ::1 at 2021-05-26 04:35:04 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rzptj/CIifui7tm//tdAU53Unl0KLgdJed1QZCnYJxkVG4nL6fk/bAUG1C0ZhnNFM4bg1eItdmEvj/DnIwHs6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar1"=>#<ActionDispatch::Http::UploadedFile:0x00007fe902513ab8 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-cmklgp.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar1]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar1_cache"=>""}, "commit"=>"edit", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fe90261c158>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:38:in `update'
+Started PATCH "/users/1" for ::1 at 2021-05-26 04:40:56 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rzptj/CIifui7tm//tdAU53Unl0KLgdJed1QZCnYJxkVG4nL6fk/bAUG1C0ZhnNFM4bg1eItdmEvj/DnIwHs6g==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar1"=>#<ActionDispatch::Http::UploadedFile:0x00007fe8ecafdb60 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-tg67lg.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar1]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar1_cache"=>""}, "commit"=>"edit", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fe8ecafe538>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:38:in `update'
+Started PATCH "/users/1" for ::1 at 2021-05-26 04:41:36 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kDMpS/51o0AjXS9+F++cDDxFkhQV+3hMKmiEnAra2ZlYO375ABtyVC9ngP/fhflPvrTW/XMCOH1n/ImtVimMA==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar1"=>#<ActionDispatch::Http::UploadedFile:0x00007fe8f4911100 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-bf9bio.jpg>, @original_filename="Bella-Agossou-2-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar1]\"; filename=\"Bella-Agossou-2-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar1_cache"=>""}, "commit"=>"edit", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fe8f4913810>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:38:in `update'
+Started GET "/users/1" for ::1 at 2021-05-26 04:41:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-26 04:41:48 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-26 04:41:59 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions/1" for ::1 at 2021-05-26 04:42:11 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bjFvDwhmZoNmVw7Otz/yb9xZPgGGS9j9q5EQ0D1AGjbdEU5Rw5/dxzZn5HCwHlv60lL7EiPQPf1up0Dk+DPXYA==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-26 04:42:11 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2021-05-26 04:42:28 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5edMVAU67RpMjlkouCSlK+WzVHQqJZiXiTun5XnIQoxWx20KzsNWXhy+s5a/BQy+67iRZ4++fZdMDffRvLuP2g==", "session"=>{"email"=>"pi@yahoo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pi@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 260ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2021-05-26 04:42:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-26 04:42:33 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.5ms)
+  Rendered users/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2021-05-26 04:42:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-05-26 04:42:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 45ms (Views: 39.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/1" for ::1 at 2021-05-26 04:42:58 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WOgUo1BeDZzxE1vBni6FyGzZhDZcQ/86px/Jfn12llUKyfDnSS+7C1b7VlN5f7bewov6vrRAjhLxTWn9d69dpg==", "user"=>{"name"=>"pi", "email"=>"pi@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar1_cache"=>""}, "commit"=>"edit", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fe8f4f94bf8>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:38:in `update'
+Started GET "/users/1" for ::1 at 2021-05-26 04:43:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/sessions/1" for ::1 at 2021-05-26 04:47:13 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IWqvVosjohwVoiFQrqH5DgnP1oL/b+pXEo9uIv9XCFSSSo4IQNoZWEWSy+6pgFCbB8QTkVr0D1fXuT4WOiTFAg==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/sessions/new" for ::1 at 2021-05-26 04:47:13 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2021-05-26 04:47:17 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:3
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2021-05-26 04:48:04 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AktDNnJYs8wi5oTwMszr4zpGxboPRnOxaLkbgn++Ae9Q1LXCNo+N2lDLw7efQSKbgrwHkfoeJqtl1IIT1lEqQ==", "user"=>{"name"=>"momo", "email"=>"momo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000558f4eea0b68 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-5483-1w3txv7.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x0000558f4f1c9268>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:21:in `create'
+Started POST "/users" for ::1 at 2021-05-26 04:54:15 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hado/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8AktDNnJYs8wi5oTwMszr4zpGxboPRnOxaLkbgn++Ae9Q1LXCNo+N2lDLw7efQSKbgrwHkfoeJqtl1IIT1lEqQ==", "user"=>{"name"=>"momo", "email"=>"momo@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055b247a8f800 @tempfile=#<Tempfile:/tmp/RackMultipart20210526-6388-h2xz5q.jpeg>, @original_filename="Benin_Bauerinnen_Titelbild~-~767w.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"Benin_Bauerinnen_Titelbild~-~767w.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "image_cache"=>""}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `private' for #<UsersController:0x000055b247a0aa60>
+Did you mean?  print):
+  
+app/controllers/users_controller.rb:53:in `create'
