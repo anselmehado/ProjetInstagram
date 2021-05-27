@@ -1,7 +1,6 @@
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  # Choose what kind of storage to use for this uploader:
   storage :file
   process resize_to_fit: [200, 200]
 
@@ -14,7 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 end
 
 def scale(width, height)
-  # do something
+
 end
 
 end

@@ -2,6 +2,19 @@ class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+
+  def create
+   @post = Post.new(post_params)
+   if @post.save
+     PostMailer.post_mail(@post).deliver  ##Addendum
+     redirect_to posts_path, notice: 'Contact was successfully created.'
+   else
+     render :new
+   end
+ end
+
+
+
   def index
     @posts = Post.all
   end
@@ -54,6 +67,17 @@ class PostsController < ApplicationController
       #@post = Post.new(post_params)
       render :new if @post.invalid?
   end
+
+
+
+  private
+  def set_post
+   @post = Post.find(params[:id])
+ end
+ def post_params
+   params.require(:post).permit(:name, :email, :content)
+ end
+
 
   private
   def post_params

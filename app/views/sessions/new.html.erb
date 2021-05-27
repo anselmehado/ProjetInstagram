@@ -1,20 +1,33 @@
-<h1>Log in</h1>
- <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
-<center>
-<table cellpadding=2 cellspacing=2 width ="50%"  height="50px" border="3px">
-   <tr>
-     <td class="label_connexion"> <%= f.label :email %></td>
-     <td> <%= f.email_field :email %></td>
-   </tr>
-   <tr>
-     <td><%= f.label :password %></td>
-     <td><%= f.password_field :password %></td>
-   </tr>
- </table><br>
- <table>
-   <tr>
-   <td colspan="2"> <%= f.submit "Log in" %></td>
-   </tr>
- </table>
- </center>
+<div class="container_connexion">
+
+  <div class="row">
+      <div class=""></div>
+      <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+
+        <div class="label_button">
+          <%= f.text_field :email, placeholder: "Entrer votre email" %><br><br>
+        </div>
+        <div class="labal_pass">
+          <%= f.password_field :password, placeholder: "votre mot de passe" %><br>
+        </div>
+
+        <div class="actions"><br> <br>
+          <%= f.submit 'Connexion', class: 'btn btn-primary'%>
+        </div>
+
+        <div class="actions"><br> <br>
+        <%=  link_to "Créer un compte", new_user_path, class: 'btn btn-primary'%>
+
+        </div>
+
+  </div>
+
  <% end %>
+
+ <div class="container">
+  </div>
+    <div class="test">
+    <h1>FaceBook clone </h1>
+  </div>
+
+</div>
