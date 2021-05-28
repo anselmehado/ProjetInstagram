@@ -7,40 +7,37 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/sample.css">
 </head>
-<body>
+<body background-color:red>
   <header class="header clearfix">
 
-    <ul class="menu_horizontal">
-		<li class="bouton_gauche"><a href="#">xxx</a></li>
-    <li><%= link_to 'Delete post', user_path(user.id), method: :delete,data: { confirm: 'Can I really edit it?' } %></li>
-    </ul>
   </header>
 
-  <h1>All blogs list</h1>
+  <h1 id="title">All blogs list</h1>
 
   <p><%= notice %></p>
 
-  <% @users.each do |user| %>
+  <% @posts.each do |post| %>
 
+    <%= post.created_at %><p><b>Posted by:</b> <%= post.user.name %></p>
 
-    <label for="">Date de creation du blog:</label> <%= user.created_at %> <br>
+    <textarea id="w3review" name="w3review" rows="4" cols="25" maxlength="140">
+      <%= post.content %>
+    </textarea>   <br>
+    <%= image_tag(post.avatar_url,style:'width:230px;height:100px') if post.avatar_url %><br><br>
 
-<textarea id="w3review" name="w3review" rows="4" cols="25" maxlength="140">
+    <div class="actions">
+    <%=  link_to 'Show', post, class: 'btn btn-primary'%>
+    <%=  link_to 'Edit', edit_post_path(post.id), class: 'btn btn-primary'%>
+    <%=  link_to 'Delete post', post_path(post.id), method: :delete,data: { confirm: 'Can I really edit it?' }, class: 'btn btn-primary'%>
+  </div><br><br>
 
-  <%= user.name %>
-  <%= user.email %>
-
-</textarea> <br>
-<p><b>Posted by:</b> <%= user.name %></p>
-<a href="<%= edit_user_path(user.id) %> " class="bt-btn-primary">Edit</a>
-
-<td><%= link_to 'Delete post', user_path(user.id), method: :delete,data: { confirm: 'Can I really edit it?' } %></td>
-
-<br>
-  <% end %>
+  <div class="actions">
+        <%=  link_to 'Post a new blog', new_post_path, class: 'btn btn-primary'%>
+  </div>
 
   <br>
-<%= link_to 'Post a new blog', new_user_path %>
+<% end %>
+<br>
 
 </body>
 </html>
