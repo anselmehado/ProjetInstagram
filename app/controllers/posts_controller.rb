@@ -3,18 +3,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
 
-  def create
-   @post = Post.new(post_params)
-   if @post.save
-     PostMailer.post_mail(@post).deliver  ##Addendum
-     redirect_to posts_path, notice: 'Contact was successfully created.'
-   else
-     render :new
-   end
- end
-
-
-
   def index
     @posts = Post.all
   end
@@ -38,6 +26,7 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
+         PostMailer.post_mail(@post).deliver
         redirect_to posts_path, notice: "i post a blog！"
       else
         render :new
@@ -45,7 +34,9 @@ class PostsController < ApplicationController
     end
   end
 
+
   def update
+
     if @post.update(post_params)
       redirect_to posts_path, notice: "I edited the blog!"
     else
@@ -56,11 +47,21 @@ class PostsController < ApplicationController
   def set_post
       @post = Post.find(params[:id])
   end
+  
 
   def destroy
+
+    if @post.user != current_user
+      flash.now[:error] = 'unauthorized access!'
+      redirect_to posts_path
+    else
+
     @post.destroy
     redirect_to posts_path, notice:"I deleted the blog!"
   end
+end
+
+
 
   def confirm
       @post = current_user.posts.build(post_params)
