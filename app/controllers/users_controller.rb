@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :login_required, only: [:new, :create]
   def show
        @user = User.find(params[:id])
-       redirect_to picture_blogs_path, notice: "recorded tampering. " unless current_user.id == @user.id
+       redirect_to posts_path, notice: "recorded tampering. " unless current_user.id == @user.id
   end
 
   def index
