@@ -53,3 +53,5 @@ gem'bcrypt', '3.1.13'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'mimemagic', '0.3.7'
+
+gem 'faker'

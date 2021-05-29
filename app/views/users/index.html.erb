@@ -29,6 +29,7 @@
     <%=  link_to 'Show', post, class: 'btn btn-primary'%>
     <%=  link_to 'Edit', edit_post_path(post.id), class: 'btn btn-primary'%>
     <%=  link_to 'Delete post', post_path(post.id), method: :delete,data: { confirm: 'Can I really edit it?' }, class: 'btn btn-primary'%>
+    <%=  link_to 'Post a new blog', new_post_path, class: 'btn btn-primary'%>
   </div><br><br>
 
   <div class="actions">

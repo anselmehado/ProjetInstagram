@@ -12,6 +12,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if @post.user != current_user
+      flash.now[:error] = 'unauthorized access!'
+      redirect_to posts_path
+    else
+    end
 
   end
 
@@ -47,7 +52,7 @@ class PostsController < ApplicationController
   def set_post
       @post = Post.find(params[:id])
   end
-  
+
 
   def destroy
 
